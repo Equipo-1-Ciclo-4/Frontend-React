@@ -36,11 +36,11 @@ function Index() {
 
     return (
         <div>
-            <header className="py-2 bg-primary text-white">
+            <header className="container py-2 bg-primary text-white mt-2 ">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <h1><i className="fas fa-pencil-alt"></i>Empleados</h1>
+                            <h1><i className="fas fa-pencil-alt"></i> Menús y clientes</h1>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ function Index() {
                     <div className="col-md-3">
                         <Link to="#" className="btn btn-primary btn-block" data-toggle="modal" data-target="#addEmpleado">
                         <i className="fas fa-plus"></i>
-                        Add Empleado
+                        Actualizar menú
                         </Link> 
                     </div>
 
@@ -110,7 +110,7 @@ function Index() {
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content">
                         <div className="modal-header bg-primary text-white">
-                            <h4 className="modal-title">Add empleados</h4>
+                            <h4 className="modal-title">Añadir empleado</h4>
                             <button className="close" data-dismiss="modal">
                                 <span>&times</span>
                             </button>

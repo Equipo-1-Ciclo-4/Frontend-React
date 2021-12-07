@@ -1,9 +1,11 @@
+//import React from 'react'
 import React, {useState} from 'react'
 import Axios from 'axios'
 import Swal from 'sweetalert2'
+import Footer from './Footer'
+import "./footer.css"
 
-
-function Login() {
+const Pedidos = ()=> {
 
     const [correo, setCorreo] = useState('')
     const [contrasena, setContrasena] = useState('')
@@ -36,7 +38,7 @@ function Login() {
             sessionStorage.setItem('nombre', nombre)
             sessionStorage.setItem('idusuario', idusuario)
 
-            window.location.href="/datos"
+            window.location.href="/index"
 
             Swal.fire({
                 icon: 'success',
@@ -49,14 +51,17 @@ function Login() {
         }
 
     }
-
-
-
-
-    return (
+    return(
+     <div className="container">
+        <div className="container mr-auto my-2">
+            <h2>Pedidos</h2>
+        </div>
+        <div className="container-flex">
+        <img  className="img-fluid"  src="pedido3.jpg" alt="" />
+        </div>
         <div className="container mt-4">
             <div className="row">
-                <div className="col-md-4 mx-auto">
+                <div className="col-md-4">
                     <div className="card">
                         <div className="container text-center fa-3x">
                             <i className="fas fa-user"></i>
@@ -93,15 +98,42 @@ function Login() {
                                 
 
                             </form>
+                            
                         </div>
                     </div>
-
+                    
                 </div>
-
+                <div className= "col-md-4">
+                        <div className="card mb-3">
+                        <img src="pago.jfif" className="card-img-top" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Pago electrónico</h5>
+                            <p className="card-text">Pague sus pedidos con tarjetas débito, crédito o PSE. Tambien se aceptan pago por transferencia bancaria o Nequi. Contamos con servicio de datáfono inhalambrico</p>
+                            <p className="card-text"><small class="text-muted"></small></p>
+                        </div>
+                        </div> a la puerta de su casa.
+                        
+                </div>
+                <div className= "col-md-4">
+                        <div className="card mb-3">
+                        <img src="online.jpg" className="card-img-top" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">Pedidos Online</h5>
+                            <p className="card-text">Realice sus pedidos sin moverse de su casa u oficina. Pedidos a traves de nuestra página web</p>
+                            <p className="card-text"><small class="text-muted"></small></p>
+                        </div>
+                        </div>
+                        
+                </div>
+                
             </div>
             
         </div>
+        <div className="container text-center">
+          <Footer/>
+        </div>
+     </div>
     )
 }
 
-export default Login
+export default Pedidos

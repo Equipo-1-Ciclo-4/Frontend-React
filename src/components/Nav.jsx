@@ -18,18 +18,26 @@ function Nav() {
                 <span className="navbar-toggler-icon"></span>
             </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/menu"><i className=""></i> Menú</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/clientes"><i className=""></i> Clientes</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/pedidos"><i className=""></i> Pedidos</Link>
+                    </li>
+                    </ul>
                     <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         <Link className="nav-link" to="/login"><i className="fas fa-user"></i> Ingresar</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/registrar"><i className="fas fa-user-plus"></i> Registrarse</Link>
-                    </li>
+                    
                     <li className="nav-item">
                         <Link className="nav-link" onClick={()=> salir()} to="/"><i className="fas fa-user-times"></i> Salir</Link>
                     </li>
-                                                           
-                    </ul>
+                    </ul>                                 
                 </div>
            </div>
         </nav>

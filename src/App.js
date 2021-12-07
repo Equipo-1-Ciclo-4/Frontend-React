@@ -6,6 +6,10 @@ import Inicio from './components/Inicio';
 import Login from './components/Login';
 import Nav from './components/Nav';
 import Registro from './components/Registro';
+import Menu from './components/Menu';
+import Clientes from './components/Clientes';
+import Pedidos from './components/Pedidos';
+import Datos from './components/Datos';
 
  
 function App() {
@@ -16,6 +20,10 @@ function App() {
       <Route path='/login' exact component = {Login}/>
       <Route path='/registrar' exact component = {Registro}/>
       <Route path='/index' exact component = {Index}/>
+      <Route path='/menu' exact component = {Menu}/>
+      <Route path= '/clientes' exact component = {Clientes}/>
+      <Route path= '/pedidos' exact component = {Pedidos}/>
+      <Route path= '/datos' exact component = {Datos}/>
     </Router>
   );
 }
